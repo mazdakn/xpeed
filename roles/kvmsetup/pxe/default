@@ -1,0 +1,2 @@
+default images/ubuntu/14.04/amd64/linux
+append auto=true initrd=images/ubuntu/14.04/amd64/initrd.gz ksdevice=eth0 interface=auto priority=critical url=http://10.0.0.1/preseed-ubuntu.cfg hostname=ubuntu

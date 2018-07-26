@@ -1,0 +1,23 @@
+<!-- admin/infrastructure network used for infrastructure -->
+<network>
+  <name>admin</name>
+  <bridge name="adm-br" stp='on' delay='0'/>
+  <forward/>
+  <ip address="10.0.0.1" netmask="255.255.255.0">
+    <tftp root="/var/tftp/"/>
+    <dhcp>
+      <bootp file='pxelinux.0'/>
+      <range start="10.0.0.200" end="10.0.0.250"/>
+	  <host mac='00:00:00:00:00:01' name='node0' ip='10.0.0.100'/>
+	  <host mac='00:00:00:00:01:01' name='node1' ip='10.0.0.101'/>
+	  <host mac='00:00:00:00:02:01' name='node2' ip='10.0.0.102'/>
+	  <host mac='00:00:00:00:03:01' name='node3' ip='10.0.0.103'/>
+	  <host mac='00:00:00:00:04:01' name='node4' ip='10.0.0.104'/>
+	  <host mac='00:00:00:00:05:01' name='node5' ip='10.0.0.105'/>
+	  <host mac='00:00:00:00:06:01' name='node6' ip='10.0.0.106'/>
+	  <host mac='00:00:00:00:07:01' name='node7' ip='10.0.0.107'/>
+	  <host mac='00:00:00:00:08:01' name='node8' ip='10.0.0.108'/>
+	  <host mac='00:00:00:00:09:01' name='node9' ip='10.0.0.109'/>
+    </dhcp>
+  </ip>
+</network>

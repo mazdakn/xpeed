@@ -1,0 +1,3 @@
+linux bridge -> ovs
+load virtio-balloon driver - done
+

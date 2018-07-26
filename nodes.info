@@ -1,0 +1,6 @@
+1 - nodeX
+		eth0: 00:00:00:00:0X:01	/ 10.0.10.10X	(admin)
+		eth1: 00:00:00:00:0X:02	/		(internal1)
+		eth2: 00:00:00:00:0X:03	/		(internal2)
+		eth3: 00:00:00:00:0X:04	/		(external)
+

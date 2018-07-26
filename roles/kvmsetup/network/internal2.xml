@@ -1,0 +1,5 @@
+<!-- openstack data network -->
+<network>
+  <name>internal2</name>
+  <bridge name="int2-br" stp='on' delay='0'/>
+</network>

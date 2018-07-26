@@ -1,0 +1,60 @@
+<domain type='kvm'>
+  <name>node4</name>
+  <uuid>00000000-0000-0000-0000-000000000004</uuid>
+  <title>node4</title>
+  <cpu mode='host-passthrough'></cpu>
+  <memory unit='MiB'>1024</memory>
+  <currentMemory unit='MiB'>1024</currentMemory>
+  <vcpu>1</vcpu>
+  <os>
+    <type arch='x86_64' machine='pc'>hvm</type>
+	<boot dev='cdrom'/>
+    <boot dev='hd'/>
+	<boot dev='network'/>
+	<bootmenu enable='yes'/>
+  </os>
+  <features>
+    <acpi/>
+  </features>
+  <clock offset='utc'/>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>destroy</on_crash>
+  <devices>
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2'/>
+      <source file='/var/lib/libvirt/images/node4.qcow2'/>
+      <target dev='vda' bus='virtio'/>
+    </disk>
+	<disk type='file' device='cdrom'>
+  		<driver name='qemu' type='raw'/>
+    	<target dev='sdb' bus='sata'/>
+  		<readonly/>
+	</disk>
+	<interface type='network'>
+      <mac address='00:00:00:00:04:01'/>
+      <source network='admin'/>
+      <model type='virtio'/>
+    </interface>
+    <interface type='network'>
+      <mac address='00:00:00:00:04:02'/>
+      <source network='internal1'/>
+      <model type='virtio'/>
+    </interface>
+    <interface type='network'>
+      <mac address='00:00:00:00:04:03'/>
+      <source network='internal2'/>
+      <model type='virtio'/>
+    </interface>
+    <interface type='network'>
+      <mac address='00:00:00:00:04:04'/>
+      <source network='external'/>
+      <model type='virtio'/>
+    </interface>
+    <console type='pty'>
+		<target port='0'/>
+    </console>
+	<memballoon model='virtio'/>
+	<graphics type='vnc' port='-1'/>
+  </devices>
+</domain>

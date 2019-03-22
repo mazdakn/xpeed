@@ -1,7 +1,7 @@
 <!-- openstack external network -->
 <network>
   <name>external</name>
-  <bridge name="ext-br" stp='on' delay='0'/>
+  <bridge name="br-ext" stp='on' delay='0'/>
   <forward/>
   <ip address="10.0.100.1" netmask="255.255.255.0">
   </ip>

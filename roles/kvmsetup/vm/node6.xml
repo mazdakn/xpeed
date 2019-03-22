@@ -38,16 +38,11 @@
     </interface>
     <interface type='network'>
       <mac address='00:00:00:00:06:02'/>
-      <source network='internal1'/>
+      <source network='internal'/>
       <model type='virtio'/>
     </interface>
     <interface type='network'>
       <mac address='00:00:00:00:06:03'/>
-      <source network='internal2'/>
-      <model type='virtio'/>
-    </interface>
-    <interface type='network'>
-      <mac address='00:00:00:00:06:04'/>
       <source network='external'/>
       <model type='virtio'/>
     </interface>

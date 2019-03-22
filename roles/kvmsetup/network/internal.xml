@@ -1,0 +1,5 @@
+<!-- openstack internal/control network -->
+<network>
+  <name>internal</name>
+  <bridge name="br-int" stp='on' delay='0'/>
+</network>

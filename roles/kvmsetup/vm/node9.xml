@@ -44,7 +44,7 @@
     </interface>
     <interface type='network'>
       <mac address='00:00:00:00:09:03'/>
-      <source network='exnternal'/>
+      <source network='external'/>
       <model type='virtio'/>
     </interface>
     <console type='pty'>
